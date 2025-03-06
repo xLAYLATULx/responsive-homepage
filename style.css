@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  overflow-x: hidden; /* Prevents side scrolling */
+  display: flex;
+  flex-direction: column;
+}
+
+
+.square {
+  position: absolute;
+  background-color: rgb(74, 160, 196);
+  width: 1800px;  /* Reduced size */
+  height: 1800px;
+  z-index: -1;
+  transform: rotate(80deg);
+  top: -1200px;  /* Moves it upwards */
+  left: -300px; /* Moves it left to avoid horizontal overflow */
+}
+
+.main{
+  width: 90%;
+  margin-top: 60px;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about{
+  background-color: white;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  padding: 50px;
+}
+
+.image{
+  position: relative;
+  flex: 1;
+}
+
+.about p{
+  font-size: min(25px);
+  color: rgb(102, 101, 101);
+}
+
+.about h1{
+  font-size: 50px;
+}
+
+h1{
+  font-family: "Playfair Display", sans-serif;
+}
+
+.image h1{
+  position: absolute;
+  z-index: 1;
+  top: 5px;
+  font-size: 70px;
+  color: rgb(0, 0, 0);
+  padding: 0 15px;
+}
+
+#person {
+  width: 550px;
+  height: 650px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+.icons{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 100px;
+}
+
+i{
+  color: black;
+  font-size: 40px;
+  margin: 10px;
+}
+
+.work{
+  margin: 100px 50px;
+
+}
+
+.work h2{
+  font-size: 50px;
+  font-weight: lighter;
+  font-family: "Playfair Display", sans-serif;
+  margin-bottom: 10px;
+}
+
+.cards{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-rows: 1fr 1fr;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.card{
+  height: 450px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  flex: 1;
+}
+
+.color{
+  height: 50%;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.color p{
+  text-align: center;
+  font-family: "Playfair Display", sans-serif;
+  font-size: 60px;
+}
+
+
+
+.card-text{
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-text p{
+  margin-top: 10px;
+  font-size: 20px;
+  color: rgb(102, 101, 101);
+  
+}
+
+.top-line{
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-line h3{
+  font-size: 30px;
+  font-family: "Playfair Display", sans-serif;
+  font-weight: lighter;
+}
+
+.red{
+  background-color: rgb(111, 29, 29);
+}
+
+.purple{
+  background-color: purple;
+}
+
+.green{
+  background-color: green;
+}
+
+.pink{
+  background-color: pink;
+}
+
+.orange{
+  background-color: orange;
+}
+
+.blue{
+  background-color: blue;
+}
+
+footer{
+  background-color:  rgb(74, 160, 196);
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 80px;
+  color: white;
+  
+}
+
+footer h2{
+  font-size: 50px;
+  font-family: "Playfair Display", sans-serif;
+  font-weight: lighter;
+}
+
+footer p{
+  font-size: 30px;
+  font-weight: lighter;
+}
+
+footer img{
+  width: 550px;
+  height: 650px;
+}
+
+.phone, .email{
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 20px;
+}
+
+.contact-icon{
+  width: 30px;
+  height:30px;
+}
+
+.footer-icons{
+  margin: 50px;
+}
+
+.footer-text{
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .about {
+    width: 100%;
+  }
+
+  .image h1 {
+    font-size: 50px;
+  }
+
+  #person {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card {
+    height: auto;
+  }
+
+  .project-icon i{
+    font-size: max(15px);
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  footer img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+
+  footer p{
+    font-size: 100%;
+  }
+}
